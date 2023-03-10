@@ -21,6 +21,7 @@
 }
 
 .container {
+    width: 100%;
     max-width: 1249px;
     margin: 0 auto;
 
@@ -33,12 +34,9 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    /* position: sticky;
-    top: 0; */
-    margin: 29px auto 0 auto;
+    /* position: sticky; */
+    margin-top: 29px;
     padding: 0 16px;
-    width: 100%;
-    max-width: 1249px;
     min-height: 89px;
     margin-top: 29px;
     background-color: #000000;
@@ -100,6 +98,7 @@
     line-height: 72px;
     text-transform: uppercase;
     font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
 .letter_spacing {
@@ -114,25 +113,33 @@
     font-weight: 400;
 }
 
-.contact_us_button {
+.button {
     display:inline-block;
-    width: 227px;
-    height: 55px;
-    padding: 16px 0;
     text-align: center;
-    color: #FFFFFF;
-    background-color: #FF3F40;
     text-decoration: none;
+    margin-bottom: 50px;
+    min-width: 227px;
+    min-height: 55px;
+    padding: 16px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
 }
 
+.contact_us_button {
+    color: #FFFFFF;
+    background-color: #FF3F40;
+}
+
+.intro_media {
+    padding-top: 17px;
+}
+
 .video {
     max-width: 554px;
     max-height: 359px;
-    box-shadow: 10px 10px 50px #9c9898, -10px -10px 50px #9c9898, -10px 10px 50px #9c9898, 10px -10px 50px #9c9898;
-    object-fit: cover;
+    box-shadow: -2.2px -13.8px 73px rgba(0, 0, 0, 0.29);
+    object-fit: contain;
 }
 
 
