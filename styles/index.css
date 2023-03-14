@@ -1,3 +1,58 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-Italic.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-Regular.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-Medium.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-SemiBold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-Bold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(../fonts/OpenSans-ExtraBold.woff2) format('woff2');
+  }
+
+
 *,
 *::after,
 *::before {
@@ -11,6 +66,7 @@
     min-height: 100vh;
     min-width: 400px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
     color: #000000;
 }
 
@@ -58,8 +114,9 @@
     text-decoration: none;
     text-transform: uppercase;
     color: #E0E0E0;
+    font-family: 'Open Sans';
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 24px;
 }
 
@@ -112,7 +169,7 @@
 }
 
 .button {
-    display:inline-block;
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     margin-bottom: 50px;
