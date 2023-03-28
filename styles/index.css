@@ -343,7 +343,6 @@
 
 .banner {
     position: relative;
-    margin: 0 auto;
     max-width: 540px;
     padding-bottom: 33px;
 }
@@ -415,11 +414,130 @@
     transform: scale(1.1);
 }
 
-
 .products__photo {
     width: 100%;
     height: 289px;
     object-fit: cover;
+}
+
+/* Section 4 - team */
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    padding-bottom: 107px;
+}
+
+.banner__heading_left {
+    text-align: start;
+}
+
+.banner__text_left {
+    text-align: start;
+}
+
+.team__banner::after {
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: 2px;
+    transform: translateX(0%);
+}
+
+.team__members {
+    display: grid;
+    grid-template-columns: 324px 1fr;
+    grid-template-rows: 1fr 217px;
+    grid-template-areas:
+        "boss info"
+        "boss experts";
+    padding-top: 70px;
+}
+
+.team__lead-photo {
+    width: 100%;
+    max-width: 324px;
+    max-height: 460px;
+    object-fit: cover;
+    grid-area: boss;
+}
+
+.team__lead-info {
+    grid-area: info;
+    margin-left: 72px;
+}
+
+.team__lead-name {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 29px;
+}
+
+.team__lead-text {
+    max-width: 655px;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 46px;
+}
+
+.team__lead-social {
+    text-decoration: none;
+    color: #000000;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 30px;
+}
+
+.team__lead-social:hover {
+    text-decoration: underline;
+}
+
+.team__experts {
+    grid-area: experts;
+    display: flex;
+    justify-content: start;
+    gap: 17px;
+    margin-left: 72px;
+}
+
+.team__member {
+    position: relative;
+    width: 200px;
+}
+
+.team__member-photo {
+    display: block;
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.team__member-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #000000;
+    opacity: 0.5;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    height: 38px;
+    width: 200px;
+    margin: 0;
+    text-align: center;
+}
+
+.team__member:hover>.team__member-name {
+    visibility: visible;
 }
 
 /* Media */
@@ -428,6 +546,23 @@
 
     .products__list-item {
         width: calc((100% - 1vw * 2) / 3);
+    }
+
+    .team__members {
+        grid-template-rows: 460px 1fr;
+        grid-template-areas:
+            "boss info"
+            "experts experts";
+    }
+
+    .team__lead-info {
+        align-self: center;
+    }
+
+    .team__experts {
+        margin-left: 0;
+        margin-top: 50px;
+        gap: 20px;
     }
 
 }
@@ -457,6 +592,18 @@
 
 }
 
+@media screen and (max-width: 877px) {
+
+    .team__lead-info {
+        max-width: 296px;
+    }
+
+    .team__experts {
+        max-width: 420px;
+        margin: 50px auto;
+    }
+
+}
 
 @media screen and (max-width: 652px) {
 
@@ -470,7 +617,8 @@
         width: 100%;
     }
 
-}    
+}
+
 @media screen and (max-width: 636px) {
 
     .intro__heading {
@@ -488,16 +636,35 @@
         line-height: 42px;
     }
 
-    .products__filter-link {
+    .products__filter-link,
+    .team__lead-name {
         font-size: 20px;
         line-height: 22px;
+    }
+
+    .team__members {
+        grid-template-columns: 1fr;
+        grid-template-rows: 460px auto auto;
+        grid-template-areas:
+            "boss"
+            "info"
+            "experts";
+    }
+
+    .team__lead-info {
+        margin-top: 50px;
+    }
+
+    .team__experts {
+        margin-left: 0;
     }
 
 }
 
 @media screen and (max-width: 550px) {
 
-    .menu {
+    .header__menu,
+    .products__filter {
         flex-direction: column;
         min-width: 100px;
     }
@@ -522,5 +689,11 @@
         line-height: 20px;
     }
 
+}
+
+@media screen and (max-width: 437px) {
+    .team__experts {
+        justify-content: end;
+    }
 
 }
