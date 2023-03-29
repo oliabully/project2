@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 400px;
+    min-width: 350px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: #000000;
@@ -426,7 +426,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     padding-bottom: 107px;
 }
 
@@ -454,6 +454,8 @@
         "boss info"
         "boss experts";
     padding-top: 70px;
+    column-gap: 72px;
+    row-gap: 50px;
 }
 
 .team__lead-photo {
@@ -466,7 +468,6 @@
 
 .team__lead-info {
     grid-area: info;
-    margin-left: 72px;
 }
 
 .team__lead-name {
@@ -500,9 +501,8 @@
 .team__experts {
     grid-area: experts;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 17px;
-    margin-left: 72px;
 }
 
 .team__member {
@@ -516,6 +516,7 @@
     height: 217px;
     object-fit: cover;
     object-position: top;
+    cursor: pointer;
 }
 
 .team__member-name {
@@ -561,7 +562,6 @@
 
     .team__experts {
         margin-left: 0;
-        margin-top: 50px;
         gap: 20px;
     }
 
@@ -600,7 +600,6 @@
 
     .team__experts {
         max-width: 420px;
-        margin: 50px auto;
     }
 
 }
@@ -649,10 +648,6 @@
             "boss"
             "info"
             "experts";
-    }
-
-    .team__lead-info {
-        margin-top: 50px;
     }
 
     .team__experts {
