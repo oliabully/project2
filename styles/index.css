@@ -513,7 +513,10 @@
     grid-area: experts;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style-type: none;
     gap: 17px;
+    padding-left: 0;
 }
 
 .team__member {
