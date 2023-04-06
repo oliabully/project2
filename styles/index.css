@@ -187,6 +187,7 @@
     font-weight: 700;
     border-radius: 5px;
     border: 2px solid #FF0000;
+    cursor: pointer;
 }
 
 .intro__button {
@@ -623,6 +624,154 @@
     margin-right: 20px;
 }
 
+/* Section 6 - communication */
+
+.communication {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 838px 411px 1fr;
+    grid-template-rows: auto;
+    padding-top: 104px;
+    padding-bottom: 64px;
+}
+
+.communication::after {
+    content: '';
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #2D2D2D;
+    margin-top: 72px;
+    margin-bottom: 43px;
+}
+
+.communication__banner {
+    width: 100%;
+    max-width: 757px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.communication__banner::after {
+    bottom: 0;
+    left: 0;
+    width: 19%;
+    height: 2px;
+    transform: translateX(0%);
+}
+
+.communication__form {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 72px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    max-width: 734px;
+}
+
+.communication__input {
+    display: inline-block;
+    width: 46%;
+    max-width: 342px;
+    min-height: 71px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 43px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 23px 50px;
+}
+
+.communication__input::placeholder {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.communication__feedback {
+    display: inline-block;
+    width: 100%;
+    max-width: 734px;
+    min-height: 252px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 43px;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 23px 50px;
+}
+
+.communication__textarea::placeholder {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.communication__button {
+    width: 100%;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    min-height: 75px;
+    max-width: 734px;
+    padding: 24px 16px;
+    background-color: #FF3B3B;
+    color: #FFFFFF;
+    border: none;
+    margin-bottom: 43px;
+}
+
+.communication__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 72px;
+    background-color: #2D2D2D;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 141px 40px 141px 81px;
+    margin-bottom: 43px;
+}
+
+.contacts__heading {
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contacts__item {
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
 
 /* Media */
 
@@ -646,6 +795,28 @@
     .team__experts {
         margin-left: 0;
         gap: 20px;
+    }
+
+    .communication {
+        grid-template-columns: minmax(350px, 734px) minmax(350px, 500px);
+    }
+
+    .communication::after {
+        content: none;
+    }
+
+    .communication__banner {
+        grid-column-start: 1;
+    }
+
+    .communication__form {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .communication__contacts {
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 
 }
@@ -683,6 +854,20 @@
 
     .team__experts {
         max-width: 420px;
+    }
+
+    .communication {
+        display: block;
+    }
+
+    .communication__form {
+        margin: 72px auto 0 auto;
+    }
+
+    .communication__contacts {
+        margin-top: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
 }
@@ -776,6 +961,15 @@
 @media screen and (max-width: 437px) {
     .team__experts {
         justify-content: end;
+    }
+
+    .communication__input {
+        min-height: 60px;
+        padding: 16px;
+    }
+
+    .communication__feedback {
+        padding: 16px;
     }
 
 }
