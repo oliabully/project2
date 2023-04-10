@@ -188,6 +188,11 @@
     border-radius: 5px;
     border: 2px solid #FF0000;
     cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.button:hover {
+    transform: scale(110%);
 }
 
 .intro__button {
@@ -702,7 +707,7 @@
     color: #000000;
 }
 
-.communication__feedback {
+.communication__textarea {
     display: inline-block;
     width: 100%;
     max-width: 734px;
@@ -745,6 +750,10 @@
     margin-bottom: 43px;
 }
 
+.communication__button:hover {
+    transform: scale(104%);
+}
+
 .communication__contacts {
     display: flex;
     flex-direction: column;
@@ -780,6 +789,10 @@
     margin-bottom: 25px;
 }
 
+.contacts__item:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 
 .footer {
@@ -807,6 +820,11 @@
     display: inline-block;
     height: 33px;
     margin-left: 18px;
+    transition: transform 2s;
+}
+
+.footer__logo-link:hover {
+    transform: rotateY(360deg);
 }
 
 .footer__logo-img {
@@ -853,6 +871,7 @@
     .communication__form {
         grid-column-start: 1;
         grid-column-end: 2;
+        padding-right: 2vw;
     }
 
     .communication__contacts {
