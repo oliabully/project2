@@ -157,8 +157,8 @@
 
 .intro__heading {
     margin-bottom: 36px;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: clamp(35px, (1rem + 5vw), 60px);
+    line-height: clamp(42px, (1rem + 5vw), 72px);
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -243,8 +243,8 @@
 .services__heading {
     min-height: 90px;
     margin-bottom: 50px;
-    font-size: 42px;
-    line-height: 55px;
+    font-size: clamp(28px, (1rem + 4vw), 42px);
+    line-height: clamp(35px, (1rem + 4vw), 55px);
     letter-spacing: 0.4px;
     font-weight: 700;
     text-transform: uppercase;
@@ -296,9 +296,9 @@
 
 .list__heading {
     margin-bottom: 13px;
-    font-size: 24px;
+    font-size: clamp(20px, (1rem + 1vw), 24px);
+    line-height: clamp(25px, (1rem + 1vw), 30px);
     font-weight: 600;
-    line-height: 30px;
     letter-spacing: 0.2px;
 }
 
@@ -379,9 +379,9 @@
 .banner__heading {
     text-align: center;
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: clamp(28px, (1rem + 4vw), 42px);
+    line-height: clamp(35px, (1rem + 4vw), 52px);
     font-weight: 700;
-    line-height: 52px;
     letter-spacing: 0.3px;
     margin-bottom: 30px;
 }
@@ -417,8 +417,8 @@
 }
 
 .products__filter-link {
-    font-size: 22px;
-    line-height: 24px;
+    font-size: clamp(18px, (1rem + 1vw), 22px);
+    line-height: clamp(20px, (1rem + 1vw), 24px);
     font-weight: 600;
     color: #000000;
 }
@@ -507,7 +507,8 @@
 }
 
 .team__lead-name {
-    font-size: 30px;
+    font-size: clamp(18px, (1rem + 1vw), 30px);
+    line-height: clamp(20px, (1rem + 1vw), 33px);
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 16px;
@@ -602,8 +603,8 @@
 .subscribe__heading {
     text-align: center;
     margin-bottom: 17px;
-    font-size: 42px;
-    line-height: 60px;
+    font-size: clamp(28px, (1rem + 4vw), 42px);
+    line-height: clamp(40px, (1rem + 4vw), 60px);
     letter-spacing: 1px;
     color: #FFFFFF;
 }
@@ -1037,23 +1038,6 @@
 
 @media screen and (max-width: 636px) {
 
-    .intro__heading {
-        font-size: 40px;
-        line-height: 52px;
-    }
-
-    .services__heading,
-    .banner__heading {
-        font-size: 30px;
-        line-height: 42px;
-    }
-
-    .products__filter-link,
-    .team__lead-name {
-        font-size: 20px;
-        line-height: 22px;
-    }
-
     .team__members {
         grid-template-columns: 1fr;
         grid-template-rows: 460px auto auto;
@@ -1065,12 +1049,6 @@
 
     .team__experts {
         margin-left: 0;
-    }
-
-    .subscribe__heading {
-        font-size: 32px;
-        line-height: 45px;
-
     }
 
     .subscribe__input,
@@ -1099,24 +1077,13 @@
         min-width: 100px;
     }
 
-    .intro__heading {
-        font-size: 35px;
-        line-height: 42px;
-    }
-
     .intro__heading_letter-spacing {
         letter-spacing: 2px;
     }
 
-    .services__heading,
-    .banner__heading {
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    .products__filter-link {
-        font-size: 18px;
-        line-height: 20px;
+    .communication__input {
+        width: 100%;
+        max-width: 518px;
     }
 
 }
@@ -1124,11 +1091,6 @@
 @media screen and (max-width: 437px) {
     .team__experts {
         justify-content: end;
-    }
-
-    .communication__input {
-        min-height: 60px;
-        padding: 16px;
     }
 
     .communication__feedback {
