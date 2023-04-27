@@ -1,3 +1,8 @@
+:root {
+    --primary-black: #000000;
+    --primary-red: #FF2D2D;
+}
+
 @font-face {
     font-family: 'Open Sans';
     font-style: italic;
@@ -67,7 +72,7 @@
     min-width: 350px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    color: #000000;
+    color: var(--primary-black);
 }
 
 .page__wrapper {
@@ -98,7 +103,7 @@
 .page__header {
     min-height: 89px;
     margin-top: 29px;
-    background-color: #000000;
+    background-color: var(--primary-black);
 }
 
 .header__menu {
@@ -199,7 +204,7 @@
 
 .intro__button {
     color: #FFFFFF;
-    background-color: #FF2D2D;
+    background-color: var(--primary-red);
     margin-bottom: 50px;
 }
 
@@ -259,15 +264,15 @@
 }
 
 .services__button {
-    color: #FF2D2D;
+    color: var(--primary-red);
     margin-bottom: 50px;
 }
 
 .services__button:hover,
 .services__button:focus {
-    background-color: #FF2D2D;
+    background-color: var(--primary-red);
     color: #FFFFFF;
-    border: 2px solid #FF2D2D;
+    border: 2px solid var(--primary-red);
 }
 
 .services__blocks {
@@ -372,7 +377,7 @@
     left: 50%;
     width: 33%;
     height: 2px;
-    background-color: #FF2D2D;
+    background-color: var(--primary-red);
     transform: translateX(-50%);
 }
 
@@ -420,14 +425,14 @@
     font-size: clamp(18px, (1rem + 1vw), 22px);
     line-height: clamp(20px, (1rem + 1vw), 24px);
     font-weight: 600;
-    color: #000000;
+    color: var(--primary-black);
 }
 
 .products__filter-link_active,
 .products__filter-link:hover,
 .products__filter-link:focus {
     outline: none;
-    color: #FF2D2D;
+    color: var(--primary-red);
 }
 
 .products__list {
@@ -524,7 +529,7 @@
 
 .team__lead-social {
     text-decoration: none;
-    color: #000000;
+    color: var(--primary-black);
     font-style: italic;
     font-size: 18px;
     line-height: 24px;
@@ -651,8 +656,8 @@
     height: 82px;
     text-transform: uppercase;
     border-radius: 5px;
-    border: 2px solid #FF2D2D;
-    background-color: #FF2D2D;
+    border: 2px solid var(--primary-red);
+    background-color: var(--primary-red);
     color: #FFFFFF;
     margin-left: 20px;
     margin-right: 20px;
@@ -661,7 +666,7 @@
 .subscribe__button:hover,
 .subscribe__button:focus {
     background-color: #FFFFFF;
-    color: #FF2D2D;
+    color: var(--primary-red);
 }
 
 /* Section 6 - communication */
@@ -726,7 +731,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #000000;
+    color: var(--primary-black);
     margin-bottom: 43px;
     border: none;
     border-radius: 5px;
@@ -739,7 +744,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #000000;
+    color: var(--primary-black);
 }
 
 .communication__textarea {
@@ -751,7 +756,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #000000;
+    color: var(--primary-black);
     margin-bottom: 43px;
     resize: none;
     border: none;
@@ -765,7 +770,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #000000;
+    color: var(--primary-black);
 }
 
 .communication__button {
