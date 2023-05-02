@@ -65,6 +65,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -94,6 +98,11 @@
 /* Header */
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -103,6 +112,19 @@
 .page__header {
     min-height: 89px;
     margin-top: 29px;
+    background-color: var(--primary-black);
+}
+
+.menu-burger {
+    display: none;
+    background-color: var(--primary-black);
+    border: 0;
+    padding: 0;
+}
+
+.menu-burger__img {
+    width: 70px;
+    height: 70px;
     background-color: var(--primary-black);
 }
 
@@ -152,7 +174,9 @@
 }
 
 .page__intro {
+    padding-top: 119px;
     min-height: 359px;
+    scroll-margin-top: 50px;
 }
 
 .intro__content {
@@ -238,6 +262,7 @@
 
 .page__services {
     min-height: 500px;
+    scroll-margin-top: 50px;
 }
 
 .services__content {
@@ -469,6 +494,10 @@
     flex-direction: row;
     justify-content: flex-start;
     padding-bottom: 107px;
+}
+
+.page__team {
+    scroll-margin-top: 150px;
 }
 
 .banner__heading_left {
@@ -809,6 +838,7 @@
     grid-row-end: 3;
     padding: 141px 40px 141px 81px;
     margin-bottom: 43px;
+    scroll-margin-top: 40px;
 }
 
 .contacts__heading {
@@ -1027,6 +1057,44 @@
 
 }
 
+@media screen and (max-width: 799px) {
+    
+    .header {
+        justify-content: end;
+    }
+    
+    .menu-burger {
+        display: inline-block;
+        padding-right: 19px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__navigation {
+        position: relative;
+        right: 54px;
+    }
+
+    .header__menu_show {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 89px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--primary-black);
+    }
+
+    .header__menu-list {
+        position: relative;
+        min-width: 140px;
+        background-color: var(--primary-black);
+    }
+
+}
+
 @media screen and (max-width: 652px) {
 
     .services__list {
@@ -1076,7 +1144,6 @@
 
 @media screen and (max-width: 550px) {
 
-    .header__menu,
     .products__filter {
         flex-direction: column;
         min-width: 100px;

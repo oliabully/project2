@@ -13,12 +13,15 @@
 
     <div class="page__wrapper page__wrapper_grey">
         <header class="header page__header container">
+            <button class="header__menu-burger menu-burger">
+                <img class="menu-burger__img" src="img/burger.svg">
+            </button>
             <nav class="navigation header__navigation">
                 <ul class="header__menu">
-                    <li><a class="header__menu-link header__menu-link_active" href="#">home</a></li>
-                    <li><a class="header__menu-link" href="#portfolio">portfolio</a></li>
-                    <li><a class="header__menu-link" href="#about_us">about us</a></li>
-                    <li><a class="header__menu-link" href="#contact">contact</a></li>
+                    <li class="header__menu-list"><a class="header__menu-link" href="#intro">home</a></li>
+                    <li class="header__menu-list"><a class="header__menu-link" href="#services">portfolio</a></li>
+                    <li class="header__menu-list"><a class="header__menu-link" href="#team">about us</a></li>
+                    <li class="header__menu-list"><a class="header__menu-link" href="#contacts">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -27,7 +30,7 @@
     <main class="page__content">
 
         <div class="page__wrapper page__wrapper_grey">
-            <section class="intro page__intro container">
+            <section class="intro page__intro container" id="intro">
                 <div class="intro__content">
                     <h1 class="intro__heading">our strong <span
                             class="intro__heading intro__heading_letter-spacing">organaisation</span></h1>
@@ -44,7 +47,7 @@
             </section>
         </div>
 
-        <section class="services page__services container">
+        <section class="services page__services container" id="services">
             <div class="services__content">
                 <h2 class="services__heading">do you know we can provide for you ?</h2>
                 <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod
@@ -141,7 +144,7 @@
             </ul>
         </section>
 
-        <section class="team page__team container">
+        <section class="team page__team container" id="team">
             <div class="banner team__banner">
                 <h2 class="banner__heading banner__heading_left">Meet our team</h2>
                 <p class="banner__text banner__text_left">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed
@@ -214,7 +217,7 @@
                     rows="6" placeholder="Type your message"></textarea>
                 <button class="button communication__button" type="submit">Send message</button>
             </form>
-            <div class="communication__contacts contacts">
+            <div class="communication__contacts contacts" id="contacts">
                 <h2 class="contacts__heading">contact info</h2>
                 <address class="contacts__list">
                     <a class="contacts__item" href="https://goo.gl/maps/2XBFX5AHVKdLLpoP9" rel="noopener noreferrer"
@@ -227,6 +230,8 @@
         </section>
 
     </main>
+
+    <script async src="js/script.js"></script>
 
 </body>
 
