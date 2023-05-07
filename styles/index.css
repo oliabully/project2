@@ -993,7 +993,7 @@ html {
     .intro__video {
         width: 100%;
         max-width: 619px;
-        max-height: auto;
+        height: auto;
     }
 }
 
@@ -1058,33 +1058,32 @@ html {
 }
 
 @media screen and (max-width: 799px) {
-    
+
     .header {
         justify-content: end;
     }
-    
+
     .menu-burger {
         display: inline-block;
         padding-right: 19px;
-    }
-
-    .header__menu {
-        display: none;
+        cursor: pointer;
     }
 
     .header__navigation {
-        position: relative;
-        right: 54px;
+        display: none;
     }
 
-    .header__menu_show {
+    .header__navigation_show {
         position: absolute;
-        left: 0;
         right: 0;
         top: 89px;
         display: flex;
-        justify-content: center;
+        max-width: 140px;
         background-color: var(--primary-black);
+    }
+
+    .header__menu {
+        flex-direction: column;
     }
 
     .header__menu-list {

@@ -1,13 +1,12 @@
 // Бургер-меню
 
 const menuBurger = document.querySelector('.menu-burger');
-const headerMenu = document.querySelector('.header__menu');
+const headerNavigation = document.querySelector('.header__navigation');
 
 const toggleMenu = function() {
-    headerMenu.classList.toggle('header__menu_show');
+    headerNavigation.classList.toggle('header__navigation_show');
 }
 
 menuBurger.addEventListener('click', toggleMenu);
-headerMenu.addEventListener('click', toggleMenu);
-
+headerNavigation.addEventListener('click', toggleMenu);
 
