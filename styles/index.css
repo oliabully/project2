@@ -634,6 +634,10 @@ html {
     background-color: #2C2C2C;
 }
 
+.page__subscribe {
+    scroll-margin-top: 70px;
+}
+
 .subscribe__heading {
     text-align: center;
     margin-bottom: 17px;
@@ -1070,15 +1074,21 @@ html {
     }
 
     .header__navigation {
-        display: none;
+        position: fixed;
+        right: -100%;
+        top: 118px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
     }
 
     .header__navigation_show {
-        position: absolute;
+        position: fixed;
         right: 0;
-        top: 89px;
         display: flex;
         max-width: 140px;
+        visibility: visible;
+        opacity: 1;
         background-color: var(--primary-black);
     }
 
